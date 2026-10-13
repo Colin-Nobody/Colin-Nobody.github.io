@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chongliang Wang is an EEE PhD researcher at the University of Nottingham Ningbo China, working on GUVP and visual pollution in street-view imagery.">
+  <meta name="theme-color" content="#f5f7f4">
+  <title>Chongliang Wang | Research</title>
+  <style>
+    :root { color-scheme: light; --ink: #172a35; --muted: #5e7077; --green: #1e6b5c; --line: #dce5df; --paper: #ffffff; --wash: #f5f7f4; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--wash); color: var(--ink); font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #12483d; }
+    .wrap { width: min(100% - 40px, 1020px); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.8); }
+    .nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { color: var(--ink); font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
+    nav { display: flex; gap: 25px; }
+    nav a { color: var(--muted); font-size: .94rem; text-decoration: none; }
+    nav a:hover { color: var(--green); }
+    main { padding: 72px 0 88px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(245px, .8fr); gap: 56px; align-items: center; padding: 18px 0 68px; }
+    .eyebrow { color: var(--green); font-size: .78rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; }
+    h1 { margin: 12px 0 8px; font-size: clamp(2.5rem, 6vw, 4.3rem); line-height: 1.08; letter-spacing: -.055em; }
+    .role { margin: 0; color: var(--muted); font-size: 1.12rem; }
+    .intro { max-width: 620px; margin: 22px 0 0; color: #40545c; font-size: 1.06rem; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 27px; }
+    .button { display: inline-block; padding: 10px 16px; border: 1px solid var(--green); border-radius: 6px; background: var(--green); color: white; font-weight: 650; text-decoration: none; }
+    .button:hover { background: #12483d; color: white; }
+    .hero-card { padding: 27px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); box-shadow: 0 12px 35px rgba(23,42,53,.045); }
+    .hero-card .mark { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 10px; background: #e8f1eb; color: var(--green); font-size: 1.2rem; font-weight: 800; }
+    .hero-card h2 { margin: 16px 0 8px; font-size: 1.08rem; }
+    .hero-card p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .hero-card ul { margin: 15px 0 0; padding-left: 19px; color: #40545c; font-size: .91rem; }
+    section { padding: 36px 0; border-top: 1px solid var(--line); scroll-margin-top: 25px; }
+    .section-title { margin: 0 0 17px; font-size: 1.48rem; letter-spacing: -.025em; }
+    .section-copy { max-width: 760px; margin: 0; color: #40545c; }
+    .project { display: grid; grid-template-columns: 1fr auto; gap: 12px 30px; align-items: start; padding: 25px 27px; border: 1px solid var(--line); border-radius: 9px; background: var(--paper); }
+    .project h3 { margin: 0; font-size: 1.12rem; }
+    .project p { grid-column: 1 / -1; margin: 0; color: #40545c; }
+    .project-link { white-space: nowrap; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; grid-column: 1 / -1; }
+    .tag { padding: 4px 10px; border-radius: 999px; background: #e8f1eb; color: #285d50; font-size: .8rem; font-weight: 650; }
+    footer { padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 12px; }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 32px, 1020px); }
+      .nav { min-height: 60px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 3px; padding: 10px 0; }
+      nav { gap: 17px; }
+      main { padding-top: 43px; }
+      .hero { grid-template-columns: 1fr; gap: 28px; padding-bottom: 42px; }
+      .project { grid-template-columns: 1fr; }
+      .project p, .tags { grid-column: 1; }
+      footer .wrap { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Chongliang Wang</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="https://github.com/Colin-Nobody">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" id="top">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Academic homepage</div>
+        <h1>Chongliang Wang</h1>
+        <p class="role">PhD Researcher in Electrical and Electronic Engineering</p>
+        <p class="intro">I am a PhD researcher at the University of Nottingham Ningbo China. My current work focuses on understanding and measuring visual pollution in urban street-view imagery.</p>
+        <div class="actions">
+          <a class="button" href="#research">Explore my research</a>
+          <a href="https://github.com/Colin-Nobody">GitHub profile &rarr;</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Research overview">
+        <div class="mark" aria-hidden="true">CW</div>
+        <h2>Research interests</h2>
+        <p>Exploring how visual environments are perceived and how computational methods can help measure them.</p>
+        <ul>
+          <li>Urban visual pollution</li>
+          <li>Street-view image analysis</li>
+          <li>Pairwise ranking and vision-language models</li>
+        </ul>
+      </aside>
+    </div>
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <p class="section-copy">I am pursuing a PhD in Electrical and Electronic Engineering (EEE) at the University of Nottingham Ningbo China. I am currently developing GUVP, a research project on visual pollution in urban street scenes.</p>
+    </section>
+    <section id="research">
+      <h2 class="section-title">Current research</h2>
+      <article class="project">
+        <h3>GUVP — Pairwise Ranking for Visual Pollution</h3>
+        <a class="project-link" href="https://github.com/Colin-Nobody/GUVP_pairwise_ranking">View project &rarr;</a>
+        <p>GUVP studies visual pollution in street-view images. It turns pairwise judgements about which scene looks cleaner into image-level rankings. The project combines Q-score and TrueSkill aggregation with vision-language model evaluation, using evidence-based scoring and swapped image positions to help reduce A/B position bias.</p>
+        <div class="tags" aria-label="Project methods">
+          <span class="tag">Street-view imagery</span>
+          <span class="tag">Pairwise comparison</span>
+          <span class="tag">Q-score</span>
+          <span class="tag">TrueSkill</span>
+          <span class="tag">Vision-language models</span>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <span>Chongliang Wang · University of Nottingham Ningbo China</span>
+      <a href="https://github.com/Colin-Nobody/GUVP_pairwise_ranking">GUVP on GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
