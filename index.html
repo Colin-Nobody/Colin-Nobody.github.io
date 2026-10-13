@@ -3,58 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chongliang Wang is an EEE PhD researcher at the University of Nottingham Ningbo China, working on GUVP and visual pollution in street-view imagery.">
-  <meta name="theme-color" content="#f5f7f4">
-  <title>Chongliang Wang | Research</title>
+  <meta name="description" content="Chongliang Wang is an EEE PhD researcher using vision-language models, semantic segmentation, regression, and vision transformers to study urban visual pollution.">
+  <meta name="theme-color" content="#f3f6fb">
+  <title>Chongliang Wang | AI for Urban Visual Understanding</title>
   <style>
-    :root { color-scheme: light; --ink: #172a35; --muted: #5e7077; --green: #1e6b5c; --line: #dce5df; --paper: #ffffff; --wash: #f5f7f4; }
+    :root { color-scheme: light; --ink: #172438; --muted: #617087; --blue: #315ddc; --cyan: #1c9aab; --line: #dce4ef; --paper: #fff; --wash: #f3f6fb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { margin: 0; background: var(--wash); color: var(--ink); font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    a:hover { color: #12483d; }
-    .wrap { width: min(100% - 40px, 1020px); margin-inline: auto; }
-    header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.8); }
+    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #203fa0; }
+    .wrap { width: min(100% - 40px, 1080px); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.88); }
     .nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { color: var(--ink); font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
-    nav { display: flex; gap: 25px; }
+    .brand { color: var(--ink); font-weight: 750; letter-spacing: -.025em; text-decoration: none; }
+    nav { display: flex; gap: 24px; }
     nav a { color: var(--muted); font-size: .94rem; text-decoration: none; }
-    nav a:hover { color: var(--green); }
-    main { padding: 72px 0 88px; }
-    .hero { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(245px, .8fr); gap: 56px; align-items: center; padding: 18px 0 68px; }
-    .eyebrow { color: var(--green); font-size: .78rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; }
-    h1 { margin: 12px 0 8px; font-size: clamp(2.5rem, 6vw, 4.3rem); line-height: 1.08; letter-spacing: -.055em; }
+    nav a:hover { color: var(--blue); }
+    main { padding: 70px 0 84px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr); gap: 54px; align-items: center; padding: 14px 0 62px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow:before { width: 22px; height: 2px; background: var(--cyan); content: ""; }
+    h1 { margin: 14px 0 9px; font-size: clamp(2.45rem, 6vw, 4.25rem); line-height: 1.08; letter-spacing: -.06em; }
     .role { margin: 0; color: var(--muted); font-size: 1.12rem; }
-    .intro { max-width: 620px; margin: 22px 0 0; color: #40545c; font-size: 1.06rem; }
+    .intro { max-width: 650px; margin: 21px 0 0; color: #405169; font-size: 1.07rem; }
     .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 27px; }
-    .button { display: inline-block; padding: 10px 16px; border: 1px solid var(--green); border-radius: 6px; background: var(--green); color: white; font-weight: 650; text-decoration: none; }
-    .button:hover { background: #12483d; color: white; }
-    .hero-card { padding: 27px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); box-shadow: 0 12px 35px rgba(23,42,53,.045); }
-    .hero-card .mark { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 10px; background: #e8f1eb; color: var(--green); font-size: 1.2rem; font-weight: 800; }
-    .hero-card h2 { margin: 16px 0 8px; font-size: 1.08rem; }
-    .hero-card p { margin: 0; color: var(--muted); font-size: .94rem; }
-    .hero-card ul { margin: 15px 0 0; padding-left: 19px; color: #40545c; font-size: .91rem; }
-    section { padding: 36px 0; border-top: 1px solid var(--line); scroll-margin-top: 25px; }
-    .section-title { margin: 0 0 17px; font-size: 1.48rem; letter-spacing: -.025em; }
-    .section-copy { max-width: 760px; margin: 0; color: #40545c; }
-    .project { display: grid; grid-template-columns: 1fr auto; gap: 12px 30px; align-items: start; padding: 25px 27px; border: 1px solid var(--line); border-radius: 9px; background: var(--paper); }
-    .project h3 { margin: 0; font-size: 1.12rem; }
-    .project p { grid-column: 1 / -1; margin: 0; color: #40545c; }
-    .project-link { white-space: nowrap; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; grid-column: 1 / -1; }
-    .tag { padding: 4px 10px; border-radius: 999px; background: #e8f1eb; color: #285d50; font-size: .8rem; font-weight: 650; }
-    footer { padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    .button { display: inline-block; padding: 10px 16px; border: 1px solid var(--blue); border-radius: 6px; background: var(--blue); color: white; font-weight: 650; text-decoration: none; }
+    .button:hover { background: #203fa0; color: white; }
+    .stack { padding: 25px; border: 1px solid var(--line); border-radius: 11px; background: var(--paper); box-shadow: 0 14px 38px rgba(27,52,90,.06); }
+    .stack-label { color: var(--muted); font-size: .75rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    .stack h2 { margin: 4px 0 17px; font-size: 1.12rem; }
+    .stack-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .stack-list li { display: flex; align-items: center; gap: 11px; color: #405169; font-size: .92rem; }
+    .dot { display: grid; width: 28px; height: 28px; flex: 0 0 28px; place-items: center; border-radius: 8px; background: #edf2ff; color: var(--blue); font-size: .67rem; font-weight: 800; }
+    section { padding: 35px 0; border-top: 1px solid var(--line); scroll-margin-top: 25px; }
+    .section-kicker { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .section-title { margin: 4px 0 9px; font-size: 1.65rem; letter-spacing: -.035em; }
+    .section-copy { max-width: 800px; margin: 0; color: #405169; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+    .card { padding: 23px; border: 1px solid var(--line); border-radius: 9px; background: var(--paper); }
+    .card-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+    .card h3 { margin: 0; font-size: 1.08rem; }
+    .status { padding: 3px 9px; border-radius: 999px; background: #eaf1ff; color: #3453a0; font-size: .72rem; font-weight: 750; }
+    .status.done { background: #e7f5ee; color: #276747; }
+    .status.future { background: #fff2dc; color: #865c19; }
+    .card p { margin: 12px 0 0; color: #526279; font-size: .93rem; }
+    .method { display: inline-block; margin-top: 13px; color: #65748a; font-size: .78rem; font-weight: 700; }
+    .pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 23px; }
+    .step { position: relative; padding: 15px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
+    .step-num { color: var(--cyan); font-size: .72rem; font-weight: 850; letter-spacing: .1em; }
+    .step strong { display: block; margin-top: 3px; font-size: .9rem; }
+    .step span { display: block; margin-top: 4px; color: var(--muted); font-size: .79rem; line-height: 1.5; }
+    .project-link { display: inline-block; margin-top: 18px; font-weight: 700; }
+    footer { padding: 23px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
     footer .wrap { display: flex; justify-content: space-between; gap: 12px; }
-    @media (max-width: 700px) {
-      .wrap { width: min(100% - 32px, 1020px); }
-      .nav { min-height: 60px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 3px; padding: 10px 0; }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 32px, 1080px); }
+      .nav { min-height: 60px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 3px; padding: 9px 0; }
       nav { gap: 17px; }
-      main { padding-top: 43px; }
-      .hero { grid-template-columns: 1fr; gap: 28px; padding-bottom: 42px; }
-      .project { grid-template-columns: 1fr; }
-      .project p, .tags { grid-column: 1; }
+      main { padding-top: 42px; }
+      .hero { grid-template-columns: 1fr; gap: 25px; padding-bottom: 40px; }
+      .grid { grid-template-columns: 1fr; }
+      .pipeline { grid-template-columns: repeat(2, 1fr); }
       footer .wrap { flex-direction: column; }
     }
+    @media (max-width: 390px) { .pipeline { grid-template-columns: 1fr; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
@@ -64,7 +77,7 @@
       <a class="brand" href="#top">Chongliang Wang</a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#research">AI Research</a>
         <a href="https://github.com/Colin-Nobody">GitHub</a>
       </nav>
     </div>
@@ -72,44 +85,64 @@
   <main class="wrap" id="top">
     <div class="hero">
       <div>
-        <div class="eyebrow">Academic homepage</div>
+        <div class="eyebrow">AI for urban visual understanding</div>
         <h1>Chongliang Wang</h1>
-        <p class="role">PhD Researcher in Electrical and Electronic Engineering</p>
-        <p class="intro">I am a PhD researcher at the University of Nottingham Ningbo China. My current work focuses on understanding and measuring visual pollution in urban street-view imagery.</p>
+        <p class="role">PhD Researcher in Electrical and Electronic Engineering · University of Nottingham Ningbo China</p>
+        <p class="intro">My research combines vision-language models, semantic segmentation and statistical learning to study visual pollution in urban street scenes. I am developing an AI-based workflow that connects image understanding with interpretable scene features and perception-aware ranking.</p>
         <div class="actions">
-          <a class="button" href="#research">Explore my research</a>
+          <a class="button" href="#research">Explore AI research</a>
           <a href="https://github.com/Colin-Nobody">GitHub profile &rarr;</a>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Research overview">
-        <div class="mark" aria-hidden="true">CW</div>
-        <h2>Research interests</h2>
-        <p>Exploring how visual environments are perceived and how computational methods can help measure them.</p>
-        <ul>
-          <li>Urban visual pollution</li>
-          <li>Street-view image analysis</li>
-          <li>Pairwise ranking and vision-language models</li>
+      <aside class="stack" aria-label="AI research methods">
+        <div class="stack-label">Research toolkit</div>
+        <h2>From visual understanding to efficient prediction</h2>
+        <ul class="stack-list">
+          <li><span class="dot">VLM</span>Vision-language evaluation</li>
+          <li><span class="dot">SEG</span>Semantic segmentation</li>
+          <li><span class="dot">REG</span>Regression modelling</li>
+          <li><span class="dot">ViT</span>Efficient model direction</li>
         </ul>
       </aside>
     </div>
     <section id="about">
-      <h2 class="section-title">About</h2>
-      <p class="section-copy">I am pursuing a PhD in Electrical and Electronic Engineering (EEE) at the University of Nottingham Ningbo China. I am currently developing GUVP, a research project on visual pollution in urban street scenes.</p>
+      <div class="section-kicker">About</div>
+      <h2 class="section-title">AI methods for measuring visual pollution</h2>
+      <p class="section-copy">I am pursuing a PhD in Electrical and Electronic Engineering (EEE) at the University of Nottingham Ningbo China. In my GUVP project, I investigate how AI can identify visual elements in street-view imagery, relate them to human perception, and support scalable assessment of urban visual pollution.</p>
     </section>
     <section id="research">
-      <h2 class="section-title">Current research</h2>
-      <article class="project">
-        <h3>GUVP — Pairwise Ranking for Visual Pollution</h3>
-        <a class="project-link" href="https://github.com/Colin-Nobody/GUVP_pairwise_ranking">View project &rarr;</a>
-        <p>GUVP studies visual pollution in street-view images. It turns pairwise judgements about which scene looks cleaner into image-level rankings. The project combines Q-score and TrueSkill aggregation with vision-language model evaluation, using evidence-based scoring and swapped image positions to help reduce A/B position bias.</p>
-        <div class="tags" aria-label="Project methods">
-          <span class="tag">Street-view imagery</span>
-          <span class="tag">Pairwise comparison</span>
-          <span class="tag">Q-score</span>
-          <span class="tag">TrueSkill</span>
-          <span class="tag">Vision-language models</span>
-        </div>
-      </article>
+      <div class="section-kicker">GUVP · Current research</div>
+      <h2 class="section-title">An AI pipeline for street-scene assessment</h2>
+      <p class="section-copy">The project brings together complementary model families: VLMs provide pairwise perceptual judgements, segmentation models expose scene composition, and regression methods explore how semantic features relate to visual-pollution scores. A more efficient ViT-based evaluator is a future research direction.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="card-top"><h3>Vision-language models</h3><span class="status">Evaluation pipeline</span></div>
+          <p>Use Qwen vision-language models to compare street-view images for perceived cleanliness and visual pollution. Evidence-based scoring and balanced A/B–B/A evaluation help audit and reduce image-position bias.</p>
+          <span class="method">Pairwise preference · MEC · BPC</span>
+        </article>
+        <article class="card">
+          <div class="card-top"><h3>Semantic segmentation</h3><span class="status done">Baseline trained</span></div>
+          <p>Train and evaluate a DeepLabV3+ model on Mapillary Vistas v2 street scenes. Pixel-level semantic predictions provide interpretable class proportions and urban-scene features for downstream analysis.</p>
+          <span class="method">DeepLabV3+ · Mapillary Vistas v2</span>
+        </article>
+        <article class="card">
+          <div class="card-top"><h3>Regression modelling</h3><span class="status">Feature-to-score analysis</span></div>
+          <p>Explore regression models that relate segmentation-derived semantic features to visual-pollution score targets, investigating whether scene composition can help explain and predict perceived pollution.</p>
+          <span class="method">Semantic features · Continuous score prediction</span>
+        </article>
+        <article class="card">
+          <div class="card-top"><h3>Vision Transformer (ViT)</h3><span class="status future">Future direction</span></div>
+          <p>Investigate a more efficient ViT-based pairwise evaluator as a potential alternative to repeated multi-pass VLM inference. The goal is to retain useful preference signals while reducing inference cost; this is planned work, not a completed replacement.</p>
+          <span class="method">Efficient pairwise evaluation · Planned</span>
+        </article>
+      </div>
+      <div class="pipeline" aria-label="Research workflow">
+        <div class="step"><span class="step-num">01 · COMPARE</span><strong>VLM judgements</strong><span>Perception-aware image-pair scores</span></div>
+        <div class="step"><span class="step-num">02 · PARSE</span><strong>Scene segmentation</strong><span>Semantic classes and urban features</span></div>
+        <div class="step"><span class="step-num">03 · EXPLAIN</span><strong>Regression analysis</strong><span>Connect features with score targets</span></div>
+        <div class="step"><span class="step-num">04 · ACCELERATE</span><strong>Explore ViT</strong><span>Future efficient pairwise evaluator</span></div>
+      </div>
+      <a class="project-link" href="https://github.com/Colin-Nobody/GUVP_pairwise_ranking">Explore the GUVP project on GitHub &rarr;</a>
     </section>
   </main>
   <footer>
